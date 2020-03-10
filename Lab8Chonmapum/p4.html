@@ -21,7 +21,7 @@
         var newLeft = (-275 + ((currTime - startTime) / 1000) * 100);
         catEl.style.left = newLeft + "px";
 
-        if (newLeft < 1900) {
+        if (newLeft < 1700) {
             window.requestAnimationFrame(walkTheCat);
         }
     };
