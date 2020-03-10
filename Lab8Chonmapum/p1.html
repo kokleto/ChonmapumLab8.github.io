@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P1 Chonmapum</title>
+</head>
+
+<body>
+    <div>
+        <label>What's your name?
+        <input id="name" type="text">
+        </label>
+        <br>
+        <label>What language do you speak?
+        <select id="lang">
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+            <option value="plt">Pig-latin</option>
+        </select>
+        </label>
+        <br>
+        <button id="button" type="button">Greet me, please!</button>
+        <div id="message"></div>
+    </div>
+
+    <script>
+        var button = document.getElementById("button");
+
+        var onButtonClick = function() {
+            var msn = document.getElementById('message');
+            var name = document.getElementById("name").value;
+            var lang = document.getElementById("lang").value;
+            var greeting;
+
+            if (lang === "en") {
+                greeting = "Hello, " + name;
+            } else if (lang === "plt") {
+                greeting = "Ello-hay, " + name;
+            } else {
+                greeting = "Hola, " + name;
+
+            }
+            msn.innerHTML = greeting
+        };
+
+        button.addEventListener("click", onButtonClick);
+    </script>
+
+</body>
+
+</html>
